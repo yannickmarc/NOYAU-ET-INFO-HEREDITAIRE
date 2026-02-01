@@ -1,0 +1,128 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121a33;
+  --panel2: #0f1730;
+  --text: #eaf0ff;
+  --muted: #a8b3d6;
+  --ok: #2fd67a;
+  --warn: #ffcc66;
+  --bad: #ff6b6b;
+  --line: rgba(255,255,255,0.12);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 900px at 15% 15%, #17235a 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+a { color: inherit; }
+button {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+button:disabled { opacity: .5; }
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(0,0,0,0.25);
+  color: var(--text);
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.row { display: flex; gap: 12px; flex-wrap: wrap; }
+.col { flex: 1 1 280px; min-width: 280px; }
+
+.h1 { font-size: 20px; margin: 0 0 6px; }
+.h2 { font-size: 16px; margin: 0 0 10px; color: var(--muted); font-weight: 600; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: rgba(0,0,0,0.25);
+}
+
+hr { border: none; border-top: 1px solid var(--line); margin: 14px 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+@media (max-width: 720px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.cardTitle { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.small { font-size: 12px; color: var(--muted); }
+.ok { color: var(--ok); }
+.warn { color: var(--warn); }
+.bad { color: var(--bad); }
+
+.dndZone {
+  min-height: 54px;
+  border: 1px dashed rgba(255,255,255,0.25);
+  border-radius: 14px;
+  padding: 10px;
+  background: rgba(0,0,0,0.18);
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  margin: 6px 6px 0 0;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.06);
+  cursor: grab;
+}
+.pill:active { cursor: grabbing; }
+.pill button {
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.footerNav {
+  display:flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}

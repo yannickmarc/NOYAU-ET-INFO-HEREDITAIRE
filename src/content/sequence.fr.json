@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "appTitle": "SVT — Localiser l’information héréditaire",
+    "teacherPinDefault": "1234",
+    "sessionTargetMinutes": 55,
+    "version": "1.0.0"
+  },
+  "steps": [
+    {
+      "type": "intro",
+      "id": "s0",
+      "title": "Problème scientifique",
+      "prompt": "On cherche à répondre à la question : « Où se trouve l’information héréditaire dans la cellule ? »\n\nTu vas t’appuyer sur des indices, les organiser, puis construire une conclusion argumentée."
+    },
+    {
+      "type": "classify",
+      "id": "s1",
+      "title": "Trier des preuves",
+      "instructions": "Classe chaque carte en : Observation / Interprétation / Conclusion.\n\nConseil : une observation décrit ce qu’on voit ; une interprétation propose une explication ; une conclusion répond à la question.",
+      "evidence": [
+        {
+          "id": "e1",
+          "title": "Cellule et noyau",
+          "text": "Sur des images de cellules animales et végétales, on distingue un noyau dans la cellule.",
+          "kind": "observation",
+          "hint": "C’est un constat issu d’une image."
+        },
+        {
+          "id": "e2",
+          "title": "Division cellulaire",
+          "text": "Lors de la division, des structures condensées apparaissent dans le noyau : les chromosomes.",
+          "kind": "observation",
+          "hint": "On décrit ce qui devient visible."
+        },
+        {
+          "id": "e3",
+          "title": "Chromosomes identiques",
+          "text": "Dans la plupart des cellules d’un individu, on retrouve le même nombre de chromosomes dans le noyau.",
+          "kind": "observation"
+        },
+        {
+          "id": "e4",
+          "title": "Stabilité de l’information",
+          "text": "Si une information est transmise fidèlement lors des divisions, elle doit être copiée et conservée dans la cellule.",
+          "kind": "interpretation",
+          "hint": "On relie un principe de transmission à une exigence."
+        },
+        {
+          "id": "e5",
+          "title": "Rôle des chromosomes",
+          "text": "Les chromosomes sont de bons candidats pour porter une information copiée à chaque division.",
+          "kind": "interpretation"
+        },
+        {
+          "id": "e6",
+          "title": "ADN",
+          "text": "Un chromosome est constitué d’ADN, et l’ADN porte des gènes (des informations liées à des caractères).",
+          "kind": "observation"
+        },
+        {
+          "id": "e7",
+          "title": "Conclusion finale",
+          "text": "L’information héréditaire est localisée dans le noyau, portée par les chromosomes constitués d’ADN.",
+          "kind": "conclusion"
+        }
+      ]
+    },
+    {
+      "type": "chain",
+      "id": "s2",
+      "title": "Reconstituer le raisonnement",
+      "instructions": "Place les éléments dans l’ordre logique pour construire une preuve complète.\n\nAstuce : commence par ce qui est observé, puis explique, puis conclus.",
+      "bank": [
+        {
+          "id": "c1",
+          "label": "On observe un noyau dans la cellule."
+        },
+        {
+          "id": "c2",
+          "label": "Pendant la division, on observe des chromosomes dans le noyau."
+        },
+        {
+          "id": "c3",
+          "label": "Les chromosomes sont présents de manière cohérente dans les cellules d’un individu."
+        },
+        {
+          "id": "c4",
+          "label": "Une information transmise doit être copiée et conservée."
+        },
+        {
+          "id": "c5",
+          "label": "Les chromosomes peuvent porter une information copiée."
+        },
+        {
+          "id": "c6",
+          "label": "Les chromosomes sont constitués d’ADN ; l’ADN porte des gènes."
+        },
+        {
+          "id": "c7",
+          "label": "Conclusion : l’information héréditaire est dans le noyau (chromosomes/ADN)."
+        }
+      ],
+      "target": [
+        "c1",
+        "c2",
+        "c4",
+        "c5",
+        "c6",
+        "c7"
+      ]
+    },
+    {
+      "type": "justify",
+      "id": "s3",
+      "title": "Justifier en quelques lignes",
+      "prompt": "Rédige 5 à 8 lignes pour répondre à : « Où se trouve l’information héréditaire dans la cellule ? »\n\nTu dois citer au moins deux indices et expliquer le lien logique qui mène à la conclusion.",
+      "rubric": {
+        "expected": [
+          "noyau",
+          "chromosome",
+          "adn",
+          "division",
+          "transmise",
+          "information"
+        ],
+        "avoid": [
+          "je pense",
+          "au hasard",
+          "forcément"
+        ]
+      }
+    },
+    {
+      "type": "summary",
+      "id": "s4",
+      "title": "Trace écrite",
+      "statement": [
+        "Dans une cellule, le noyau contient des chromosomes.",
+        "Les chromosomes sont constitués d’ADN.",
+        "L’ADN porte des gènes : ce sont des informations liées à des caractères.",
+        "Donc l’information héréditaire est localisée dans le noyau, portée par les chromosomes (ADN)."
+      ]
+    }
+  ]
+}
