@@ -9,6 +9,8 @@
     "skipLibCheck": true,
     "types": [],
     "noEmit": true
+    "resolveJsonModule": true,
+"allowSyntheticDefaultImports": true
   },
   "include": ["src"]
 }
